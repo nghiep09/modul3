@@ -64,7 +64,7 @@ select*from students;
 -- câu2
 select * from subjects;
 -- câu3
-
+select avg(mark) from marks;
 -- câu4
 select  SubjectName from Subjects where SubjectID=(select SubjectID from marks where Mark= (select max(mark) from marks ));
 
@@ -94,7 +94,8 @@ delete from students where StudentID =1;
  
  -- câu 12
  update students 
- set Status = 0;
+ set Status = 0
+ where studentID>0;
 
 
 
